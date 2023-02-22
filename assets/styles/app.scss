@@ -129,97 +129,41 @@ ul
     justify-content: flex-start;
     width: 47.5%;
 }
-#cacher
-{
-    display: block;
+
+@for $i from 1 through 6 {
+
+    #cacher#{$i} {
+        display: none;
         flex-direction: column;
-    justify-content: space-between;
-}
-#bouton
-{
-    width: 40px;
-    height: 40px;
-    border: none;
-    margin-left:50%;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding:0px;
-    cursor: pointer;
+        justify-content: space-between;
+        margin: 0px;
+        padding: 0px;
+    }
 
-}
-#bouton:hover
-{
-    width: 40px;
-    height: 40px;
-    border: 3px grey double;
-    margin-left:50%;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding:0px;
-    cursor: pointer;
+    #bouton#{$i} {
+        width: 40px;
+        height: 40px;
+        border: none;
+        margin-left: 50%;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding: 0px;
+        cursor: pointer;
+        justify-content: center;
 
-}
-#cacher2
-{
-    display: block;
-    flex-direction: column;
-    justify-content: space-between;
-    margin:0px;
-    padding:0px;
-}
-#bouton2
-{
-    width: 40px;
-    height: 40px;
-    border: none;
-    margin-left:50%;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding:0px;
-    cursor: pointer;
+    }
+    #bouton#{$i}:hover
+    {
+        width: 40px;
+        height: 40px;
+        border: 3px grey double;
+        margin-left:50%;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding:0px;
+        cursor: pointer;
 
-}
-#bouton2:hover
-{
-    width: 40px;
-    height: 40px;
-    border: 3px grey double;
-    margin-left:50%;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding:0px;
-    cursor: pointer;
-
-}
-#cacher3
-{
-    display: block;
-    flex-direction: column;
-    justify-content: space-between;
-}
-#bouton3
-{
-    width: 40px;
-    height: 40px;
-    border: none;
-    margin-left:50%;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding:0px;
-    cursor: pointer;
-
-}
-#bouton3:hover
-{
-    width: 40px;
-    height: 40px;
-    border: 3px grey double;
-    margin-left:50%;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding:0px;
-    cursor: pointer;
-
+    }
 }
 .exp_1
 {
@@ -602,239 +546,5 @@ section
         width: 100%;
         flex-direction: column;
         justify-content: space-between;
-    }
-}
-@media all and (orientation: portrait)   /* en cas de smartphone, plus de photo */ {
-    body
-    {
-        display: flex;
-        flex-direction: column;
-    }a /* Liens par défaut (non survolés) */
-    {
-        text-decoration: none;
-        color: mediumblue;
-        font-style: italic;
-    }
-
-    a:hover /* Apparence au survol des liens */
-    {
-        text-decoration: underline;
-        color: green;
-    }
-    a img
-    {
-        display: none;
-    }
-
-    h3 {
-        color: #DE781F;
-    }
-
-    h2 {
-        color: blue;
-        margin: 20px;
-    }
-
-    .body_first
-    {
-        display: flex;
-        background-image: url("fond.jpg");
-        background-repeat: repeat; /* Le fond sera répété */
-        flex-direction: column;
-    }
-
-    #cacher {
-        display: block;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    #bouton {
-        width: 40px;
-        height: 40px;
-        border: none;
-        margin-left: 50%;
-        margin-top: 0px;
-        margin-bottom: 0px;
-        padding: 0px;
-        cursor: pointer;
-
-    }
-
-    #bouton:hover {
-        width: 40px;
-        height: 40px;
-        border: 3px grey double;
-        margin-left: 50%;
-        margin-top: 0px;
-        margin-bottom: 0px;
-        padding: 0px;
-        cursor: pointer;
-
-    }
-
-    #cacher2 {
-        display: block;
-        flex-direction: column;
-        justify-content: space-between;
-        margin: 0px;
-        padding: 0px;
-    }
-
-    #bouton2 {
-        width: 40px;
-        height: 40px;
-        border: none;
-        margin-left: 50%;
-        margin-top: 0px;
-        margin-bottom: 0px;
-        padding: 0px;
-        cursor: pointer;
-
-    }
-
-    #bouton2:hover {
-        width: 40px;
-        height: 40px;
-        border: 3px grey double;
-        margin-left: 50%;
-        margin-top: 0px;
-        margin-bottom: 0px;
-        padding: 0px;
-        cursor: pointer;
-
-    }
-
-    #cacher3 {
-        display: block;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    #bouton3 {
-        width: 40px;
-        height: 40px;
-        border: none;
-        margin-left: 50%;
-        margin-top: 0px;
-        margin-bottom: 0px;
-        padding: 0px;
-        cursor: pointer;
-
-    }
-
-    #bouton3:hover {
-        width: 40px;
-        height: 40px;
-        border: 3px grey double;
-        margin-left: 50%;
-        margin-top: 0px;
-        margin-bottom: 0px;
-        padding: 0px;
-        cursor: pointer;
-
-    }
-
-    .bordure {
-        display: none;
-    }
-
-    .fonction {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        font-size: 40px;
-        justify-content: space-between;
-        align-self: flex-end;
-    }
-
-    .nom {
-        display: flex;
-        font-size: 40px;
-    }
-
-    header {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    section {
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: flex-start;
-        margin-left: 10%;
-    }
-
-    .bloc_page {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        margin: 0px 10px;
-    }
-
-    .partie_inf {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .base {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-    }
-
-    .mail {
-        display: flex;
-        flex-direction: column;
-        font-family: Times New Roman;
-        justify-content: flex-start;
-    }
-
-    .espace {
-        width: 5%;
-    }
-
-    .separation {
-        width: 99%;
-        heigth: 10px;
-        border: 3px grey solid;
-        border-radius: 20px / 10px;
-    }
-
-    .entete {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-    }
-
-    .entete_sup2 {
-        display: flex;
-        width: 99%;
-        flex-direction: row;
-        justify-content: space-between;
-        align-self: flex-start;
-    }
-
-    .entete_sup3 {
-        display: flex;
-        width: 100%;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .pro {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        width: 100%;
-    }
-
-    .base {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        width: 100%;
     }
 }

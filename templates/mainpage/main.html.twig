@@ -92,7 +92,7 @@
                                     {% set iteration = iteration + 1 %}
                                     <h3><Strong>{{ etapepro.mois }} {{ etapepro.year }} - {{ etapepro.job }} chez {{ etapepro.company }}</Strong><br /></h3>
 
-                                        <img src={{ asset("menu.jpg") }} title="Cliquez pour etendre" id={{ 'bouton'~ iteration }} width="50" style="text-align: center"/>
+                                        <img src={{ asset("menu.jpg") }} title="Cliquez pour etendre" id={{ 'bouton'~ iteration }} width="40" style="text-align: center"/>
 
                                         <div id={{ 'cacher'~ iteration }}>
                                         <ul>
@@ -113,106 +113,102 @@
 
             </div>
 <script>
-    let bouton1 = document.getElementById("bouton1");
-    let bouton2 = document.getElementById("bouton2");
-    let bouton3 = document.getElementById("bouton3");
-    let bouton4 = document.getElementById("bouton4");
-    let bouton5 = document.getElementById("bouton5");
-    let bouton6 = document.getElementById("bouton6");
 
-    let cacher1 = document.getElementById("cacher1");
-    let cacher2 = document.getElementById("cacher2");
-    let cacher3 = document.getElementById("cacher3");
-    let cacher4 = document.getElementById("cacher4");
-    let cacher5 = document.getElementById("cacher5");
-    let cacher6 = document.getElementById("cacher6");
+
+    AdapterDivAResolution()
 
 
 
-            bouton1.addEventListener('click', function () {
-                if (cacher1.style.display === "none") {
-                    cacher1.style.display = "block";
-                    bouton1.src = "menu2.jpg";
-                    bouton1.title = "Cliquez pour réduire";
+
+        let string1="bouton";
+        let string2="cacher";
+
+        for (let i = 1; i <= 6; i++) {
+
+
+            window["bouton"+i] = document.getElementById(string1 + i);
+            window["cacher"+i] = document.getElementById(string2 + i);
+        }
+
+      function cliquage1() {
+
+        if (cacher1.style.display === "none") {
+            cacher1.style.display = "block";
+            bouton1.src = "menu2.jpg";
+            bouton1.title = "Cliquez pour réduire";
+        } else {
+            cacher1.style.display = "none";
+            bouton1.src = "menu.jpg";
+            bouton1.title = "Cliquez pour étendre";
+
+        }
+    }
+
+    function cliquage2() {
+
+
+                if (cacher2.style.display === "none") {
+                    cacher2.style.display = "block";
+                    bouton2.src = "menu2.jpg";
+                    bouton2.title = "Cliquez pour réduire";
                 } else {
-                    cacher1.style.display = "none";
-                    bouton1.src = "menu.jpg";
-                    bouton1.title = "Cliquez pour étendre";
+                    cacher2.style.display = "none";
+                    bouton2.src = "menu.jpg";
+                    bouton2.title = "Cliquez pour étendre";
 
                 }
             }
-        )
+    function cliquage3() {
 
 
-            bouton2.addEventListener('click', function () {
-                    if (cacher2.style.display === "none") {
-                        cacher2.style.display = "block";
-                        bouton2.src = "menu2.jpg";
-                        bouton2.title = "Cliquez pour réduire";
-                    } else {
-                        cacher2.style.display = "none";
-                        bouton2.src = "menu.jpg";
-                        bouton2.title = "Cliquez pour étendre";
+                if (cacher3.style.display === "none") {
+                    cacher3.style.display = "block";
+                    bouton3.src = "menu2.jpg";
+                    bouton3.title = "Cliquez pour réduire";
+                } else {
+                    cacher3.style.display = "none";
+                    bouton3.src = "menu.jpg";
+                    bouton3.title = "Cliquez pour étendre";
 
-                    }
                 }
-            )
+            }
+    function cliquage4() {
+               if (cacher4.style.display === "none") {
+                    cacher4.style.display = "block";
+                    bouton4.src = "menu2.jpg";
+                    bouton4.title = "Cliquez pour réduire";
+                } else {
+                    cacher4.style.display = "none";
+                    bouton4.src = "menu.jpg";
+                    bouton4.title = "Cliquez pour étendre";
 
-            bouton3.addEventListener('click', function () {
-                    if (cacher3.style.display === "none") {
-                        cacher3.style.display = "block";
-                        bouton3.src = "menu2.jpg";
-                        bouton3.title = "Cliquez pour réduire";
-                    } else {
-                        cacher3.style.display = "none";
-                        bouton3.src = "menu.jpg";
-                        bouton3.title = "Cliquez pour étendre";
-
-                    }
                 }
-            )
-
-    bouton4.addEventListener('click', function () {
-            if (cacher4.style.display === "none") {
-                cacher4.style.display = "block";
-                bouton4.src = "menu2.jpg";
-                bouton4.title = "Cliquez pour réduire";
-            } else {
-                cacher4.style.display = "none";
-                bouton4.src = "menu.jpg";
-                bouton4.title = "Cliquez pour étendre";
-
             }
-        }
-    )
 
-    bouton5.addEventListener('click', function () {
-            if (cacher5.style.display === "none") {
-                cacher5.style.display = "block";
-                bouton5.src = "menu2.jpg";
-                bouton5.title = "Cliquez pour réduire";
-            } else {
-                cacher5.style.display = "none";
-                bouton5.src = "menu.jpg";
-                bouton5.title = "Cliquez pour étendre";
+    function cliquage5() {
+        if (cacher5.style.display === "none") {
+                    cacher5.style.display = "block";
+                    bouton5.src = "menu2.jpg";
+                    bouton5.title = "Cliquez pour réduire";
+                } else {
+                    cacher5.style.display = "none";
+                    bouton5.src = "menu.jpg";
+                    bouton5.title = "Cliquez pour étendre";
 
+                }
             }
-        }
-    )
 
-    bouton5.addEventListener('click', function () {
-            if (cacher6.style.display === "none") {
-                cacher6.style.display = "block";
-                bouton6.src = "menu2.jpg";
-                bouton6.title = "Cliquez pour réduire";
-            } else {
-                cacher6.style.display = "none";
-                bouton6.src = "menu.jpg";
-                bouton6.title = "Cliquez pour étendre";
+    cliquage1();
+    bouton1.addEventListener('click',cliquage1);
+    cliquage2();
+    bouton2.addEventListener('click',cliquage2);
+    cliquage3();
+    bouton3.addEventListener('click',cliquage3);
+    cliquage4();
+    bouton4.addEventListener('click',cliquage4);
+    cliquage5();
+    bouton5.addEventListener('click',cliquage5);
 
-            }
-        }
-    )
     function AdapterDivAResolution() {
         let x_res = screen.width;
         let y_res = screen.height;
@@ -225,6 +221,6 @@
         }
     }
     AdapterDivAResolution()
-    bouton1.addEventListener('click',cliquage, false);
+
 </script>
    {% endblock %}

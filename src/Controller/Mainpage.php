@@ -17,7 +17,7 @@ use Doctrine\ORM\QueryBuilder;
 class Mainpage extends AbstractController
 
 {
-    #[Route('/main', name: 'main')]
+    #[Route('/', name: 'main')]
     public function index(EtapesProRepository $etapesProRepository, FormationRepository $formationRepository,SkillsRepository $skillsRepository,StageRepository $stagesRepository,StepRepository $stepsRepository): Response
 
     {
