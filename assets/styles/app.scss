@@ -281,8 +281,8 @@ section
 .fin
 {
     position: relative;
-    right: 40px;
-    top: 25px;
+    right: 15px;
+    top: -5px;
   }
 @media screen and (width < 1024px)   /* en cas de smartphone, plus de photo visage*/
 {
@@ -397,13 +397,13 @@ section
         justify-content: flex-start;
         align-self: center;
     }
-    #cacher
+    #cacher1
     {
         display: block;
         flex-direction: column;
         justify-content: space-between;
     }
-    #bouton
+    #bouton1
     {
         width: 40px;
         height: 40px;
@@ -415,7 +415,7 @@ section
         cursor: pointer;
 
     }
-    #bouton:hover
+    #bouton1:hover
     {
         width: 40px;
         height: 40px;
@@ -427,67 +427,40 @@ section
         cursor: pointer;
 
     }
-    #cacher2
-    {
-        display: block;
-        flex-direction: column;
-        justify-content: space-between;
-        margin:0px;
-        padding:0px;
-    }
-    #bouton2
-    {
-        width: 40px;
-        height: 40px;
-        border: none;
-        margin-left:50%;
-        margin-top: 0px;
-        margin-bottom: 0px;
-        padding:0px;
-        cursor: pointer;
+    @for $i from 2 through 6 {
 
-    }
-    #bouton2:hover
-    {
-        width: 40px;
-        height: 40px;
-        border: 3px grey double;
-        margin-left:50%;
-        margin-top: 0px;
-        margin-bottom: 0px;
-        padding:0px;
-        cursor: pointer;
+        #cacher#{$i} {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            margin: 0px;
+            padding: 0px;
+        }
 
-    }
-    #cacher3
-    {
-        display: block;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    #bouton3
-    {
-        width: 40px;
-        height: 40px;
-        border: none;
-        margin-left:50%;
-        margin-top: 0px;
-        margin-bottom: 0px;
-        padding:0px;
-        cursor: pointer;
+        #bouton#{$i} {
+            width: 40px;
+            height: 40px;
+            border: none;
+            margin-left: 50%;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            padding: 0px;
+            cursor: pointer;
+            justify-content: center;
 
-    }
-    #bouton3:hover
-    {
-        width: 40px;
-        height: 40px;
-        border: 3px grey double;
-        margin-left:50%;
-        margin-top: 0px;
-        margin-bottom: 0px;
-        padding:0px;
-        cursor: pointer;
+        }
+        #bouton#{$i}:hover
+        {
+            width: 40px;
+            height: 40px;
+            border: 3px grey double;
+            margin-left:50%;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            padding:0px;
+            cursor: pointer;
 
+        }
     }
     .bloc_page
     {
@@ -546,5 +519,10 @@ section
         width: 100%;
         flex-direction: column;
         justify-content: space-between;
+    }
+    .img_mont
+    {
+        margin-top: 20px;
+        width: 200px;
     }
 }

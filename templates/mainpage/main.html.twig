@@ -35,18 +35,18 @@
                                     </div>
 
 
-                                    <div class="fonction">Développeur/Ingénieur Mécanique</div><!-- Titre -->
+                                    <div class="fonction">Développeur/Ingénieur Mécanique</div>
                                 </div>
                                 <div class="separation"></div>
                             </div>
 
-                            <a href={{ asset("photo_J_BONZOM_2.jpg") }} ><img src={{ asset("photo_J_BONZOM_mini2.jpg") }}  alt="Photo de Julien BONZOM" title="Cliquez pour agrandir" class="fin"/></a><!--Image photo pouvant etre agrandie-->
+                            <a href="photo_J_BONZOM.jpg"><img src="photo_J_BONZOM_mini.jpg"  alt="Photo de Julien BONZOM" title="Cliquez pour agrandir" class="fin"/></a>
 
                         </header>
 
 
                         <div class="total">
-                            <section> <!-- Section -->
+                            <section>
                                 <div class="base">
                                     <div class="competences"><p><h2>Compétences:</h2>
                                         <ul>
@@ -84,9 +84,9 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="espace"></div><!-- espace -->
+                                <div class="espace"></div>
                                 <div class="pro"><h2>Expériences Professionnelles:</h2>
-                                    <a href="http://127.0.0.1:8000/CV-J_BONZOM.pdf" target="_blank"><i><Strong>Curriculum vitae</Strong></i></a><br>
+                                    <a href="./CV-J_BONZOM.pdf" target="_blank"><i><Strong>Curriculum vitae</Strong></i></a><br>
                                     {% set iteration = 0 %}
                                     {% for etapepro in etapespro %}
                                     {% set iteration = iteration + 1 %}
@@ -120,14 +120,14 @@
 
 
 
-        let string1="bouton";
-        let string2="cacher";
+        let string1="bouton"
+        let string2="cacher"
 
         for (let i = 1; i <= 6; i++) {
 
 
-            window["bouton"+i] = document.getElementById(string1 + i);
-            window["cacher"+i] = document.getElementById(string2 + i);
+            window["bouton"+i] = document.getElementById(string1 + i)
+            window["cacher"+i] = document.getElementById(string2 + i)
         }
 
       function cliquage1() {
