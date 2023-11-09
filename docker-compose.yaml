@@ -1,0 +1,35 @@
+version:  '3.8'
+services:
+  mysql:
+    image: mysql:8.0
+    restart: on-failure
+    environment:
+      MYSQL_RANDOM_ROOT_PASSWORD: "yes"
+      MYSQL_DATABASE: base
+      MYSQL_PASSWORD: Leysin1969]
+      MYSQL_USER: joffo
+  adminer:
+      image: adminer
+      restart: on-failure
+      ports:
+        - '8080:8080'
+  nginx:
+    image: nginx:1.23.3-alpine
+    restart: on-failure
+    volumes:
+      - './apps/my-symfony-app/public/:/usr/src/app'
+      - './docker/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro'
+    ports:
+            - '80:80'
+    depends_on:
+            - php
+  php:
+      build:
+        context: .
+        dockerfile: docker/php/Dockerfile
+      volumes:
+        - './apps/my-symfony-app/:/usr/src/app'
+      restart: on-failure
+      env_file:
+        - .env
+      user: 1000:1000
