@@ -89,6 +89,10 @@
         "symfony/symfony": "*"
     },
     "extra": {
+        "incenteev-parameters": {
+            "env-map": {
+                "database_host": "DATABASE_HOST",
+                "database_port": "DATABASE_PORT",
         "symfony": {
             "allow-contrib": false,
             "require": "6.2.*"
