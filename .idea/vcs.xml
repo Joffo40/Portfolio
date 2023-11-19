@@ -3,5 +3,6 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Portfolio" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Symfony-54webapp-1" vcs="Git" />
   </component>
 </project>
