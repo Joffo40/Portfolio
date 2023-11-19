@@ -1,4 +1,4 @@
 # .platform/services.yaml
-mysql:
-  type: mysql
+mysqldb:
+  type: mysql:10.2 # MariaDB 10.2
   disk: 2048

@@ -1,5 +1,10 @@
 # .platform/routes.yaml
-"http://{default}/":
+# Si un utilisateur arrive sur le site en HTTPS, appelez l'application "app"
+"https://{default}/":
   type: upstream
-  # the first part should be your project name
-  upstream: 'myphpproject:php'
+  upstream: "app:http"
+
+# Si l'utilisateur arrive sur l'application en www, le rediriger vers https://{default}/
+"https://www.{default}/":
+  type: redirect
+  to: "https://{default}/"
