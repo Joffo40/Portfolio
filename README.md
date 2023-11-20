@@ -23,7 +23,7 @@
 # portfolio
 =======
 
-Site Portfolio conçu grace au Framework Symfony.
+Site Portfolio conçu grace au Framework Symfony. Pas encore deployé, en developpement.
 
 
 
