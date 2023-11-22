@@ -27,5 +27,4 @@ Site Portfolio conçu grace au Framework Symfony. Pas encore deployé, en develo
 
 
 
-# Portfolio
->>>>>>> c10da92211085e6efae22d2bf930fd64bbafa561
+
